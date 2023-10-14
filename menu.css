@@ -1,0 +1,89 @@
+html {
+    background: #1E1F22;
+    height: 100%;
+}
+
+footer {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+footer div {
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.main_menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 150px;
+}
+
+.main_menu button {
+    cursor: pointer;
+    scale: 3;
+    transform: rotate(0deg) scale(1);
+    width: 220px;
+    padding: 1px 0;
+    background: #00853a;
+    color: #35019d;
+    border-radius: 10px;
+    transition: all 1s;
+}
+
+.main_menu a {
+    display: block;
+    width: 100%;
+    color: #35019d;
+    text-decoration: none;
+}
+
+.logo {
+    width: 50px;
+}
+
+.leaders {
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    border: #008585 solid;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    margin: 0 auto;
+}
+
+.leaders span {
+    margin: 5px;
+    user-select: none;
+}
+
+.main_menu button:hover{
+    animation: ease-in-out spin 1.7s infinite;
+}
+
+@keyframes spin {
+    0%,50%,100%{
+        transform: rotate(0deg) scale(1);
+        filter: brightness(1);
+    }
+    25%{
+        transform: rotate(10deg) scale(2);
+        filter: brightness(1.5);
+    }
+    75%{
+        transform: rotate(-10deg) scale(2);
+        filter: brightness(1.5);
+    }
+}
