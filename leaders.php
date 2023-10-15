@@ -6,4 +6,5 @@ if (isset($data) && array_key_exists($player, $data)) {
 } else {
     $data[$player] = 1;
 }
+arsort($data);
 file_put_contents('leaderboard.txt', json_encode($data));
