@@ -2,12 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="menu.css" type="text/css"/>
+    <title>Game board</title>
+    <link rel="stylesheet" href="game.css" type="text/css"/>
     <script src="scripts/jquery-3.7.1.min.js"></script>
 </head>
 <body>
-
+<div id="names" class="players">
+    <label for="first_player">Первый игрок</label>
+    <input type="text" maxlength="20" required placeholder="Name" id="first_player">
+    <label for="second_player">Второй игрок</label>
+    <input type="text" maxlength="20" required placeholder="Name" id="second_player">
+    <button onclick="startGame()">Подтвердить</button>
+    <button onclick="window.location.href = 'http://localhost/mirea/tic-tac-toe/'">Главное меню</button>
+</div>
+<button id="back" onclick="back()">Назад</button>
+<div class="board" style="display: none">
+    <label id="player_move"></label>
+    <button id="restart" onclick="clean()">Рестарт</button>
+</div>
 </body>
+<footer>
+    <div>
+        <a href="https://vk.com/fakyring"><img class="logo" src="img/vk-logo.svg"></a>
+    </div>
+</footer>
 <script src="scripts/game_script.js"></script>
 </html>

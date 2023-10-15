@@ -4,13 +4,12 @@ function leaders() {
     leadersBoard.resizeTo(30, 500)
     leadersBoard.document.write('<html><head><title>Leadersboard</title>')
     leadersBoard.document.write('<link rel="stylesheet" href="menu.css" type="text/css"/></head>')
-    $.get('leaderboard.txt', function (data) {
+    $.post('leaderboard.txt', false, function (data) {
         let result = "<body><div class='leaders'>"
         leadersBoard.document.write(JSON.parse(data, (key, value) => {
             if (typeof key !== "undefined" && typeof value === "number") {
                 result += "<span>" + key + ": " + value + "</span>"
-            }
-            else
+            } else
                 return result + "</div>"
         }))
     })
