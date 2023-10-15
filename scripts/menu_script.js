@@ -15,3 +15,4 @@ function leaders() {
     })
     leadersBoard.document.write('</body></html>');
 }
+

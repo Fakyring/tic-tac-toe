@@ -11,4 +11,10 @@ class ScoreTest extends TestCase
         $tmp = new Score();
         $this->assertEquals($tmp->AddScore("sdas"), true);
     }
+    public function testFailAddScore()
+    {
+        $tmp = new Score();
+        $this->assertEquals($tmp->AddScore(" "), true);
+    }
 }
+

@@ -23,7 +23,8 @@ function startGame() {
     $('.players').hide()
     $('.board').show()
     $('#back').show()
-    $('#player_move').html("Ход игрока: " + (currentPlayer ? player1 + " (X)" : player2 + " (0)")).css("color", "rgb(" + [Math.floor((Math.random() * 256)), Math.floor((Math.random() * 256)), Math.floor((Math.random() * 256))] + ")")
+    $('#player_move').html("Ход игрока: " + (currentPlayer ? player1 + " (X)" : player2 + " (0)")).css("color", "rgb("
+        + [Math.floor((Math.random() * 256)), Math.floor((Math.random() * 256)), Math.floor((Math.random() * 256))] + ")")
 }
 
 function move(button) {
@@ -35,7 +36,8 @@ function move(button) {
             button.html("0")
         check((currentPlayer ? player1 : player2))
         currentPlayer = !currentPlayer
-        $('#player_move').html("Ход игрока: " + (currentPlayer ? player1 + " (X)" : player2 + " (0)")).css("color", "rgb(" + [Math.floor((Math.random() * 256)), Math.floor((Math.random() * 256)), Math.floor((Math.random() * 256))] + ")")
+        $('#player_move').html("Ход игрока: " + (currentPlayer ? player1 + " (X)" : player2 + " (0)")).css("color",
+            "rgb(" + [Math.floor((Math.random() * 256)), Math.floor((Math.random() * 256)), Math.floor((Math.random() * 256))] + ")")
     } else {
         alert("Нельзя выбирать уже выбранные плитки")
     }

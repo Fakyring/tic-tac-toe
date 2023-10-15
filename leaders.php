@@ -1,9 +1,10 @@
 <?php
-
 class Score
 {
     public function AddScore($player)
     {
+        if ($player === "" || $player === " ")
+            return false;
         $data = json_decode(file_get_contents('leaderboard.txt'), true);
         if (isset($data) && array_key_exists($player, $data)) {
             $data[$player] += 1;
@@ -21,3 +22,4 @@ if (isset($_POST['player'])) {
     $player_name = $_POST['player'];
     $score->AddScore($player_name);
 }
+
