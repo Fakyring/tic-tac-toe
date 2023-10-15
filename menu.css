@@ -69,21 +69,23 @@ body {
     user-select: none;
 }
 
-.main_menu button:hover{
+.main_menu button:hover {
+    --radius: 2deg;
+    --scale: 1.1;
     animation: ease-in-out spin 1.7s infinite;
 }
 
 @keyframes spin {
-    0%,50%,100%{
+    0%, 50%, 100% {
         transform: rotate(0deg) scale(1);
         filter: brightness(1);
     }
-    25%{
-        transform: rotate(10deg) scale(2);
+    25% {
+        transform: rotate(var(--radius)) scale(var(--scale));
         filter: brightness(1.5);
     }
-    75%{
-        transform: rotate(-10deg) scale(2);
+    75% {
+        transform: rotate(calc(var(--radius) * -1)) scale(var(--scale));
         filter: brightness(1.5);
     }
 }

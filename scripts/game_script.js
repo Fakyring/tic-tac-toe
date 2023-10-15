@@ -15,6 +15,10 @@ for (let i = 0; i < 9; i++) {
 function startGame() {
     player1 = $('#first_player').val()
     player2 = $('#second_player').val()
+    if (player1 === "")
+        player1 = "Player 1"
+    if (player2 === "")
+        player2 = "Player 2"
     currentPlayer = true
     $('.players').hide()
     $('.board').show()

@@ -35,6 +35,12 @@ body {
     height: 100%;
 }
 
+.players input {
+    border-radius: 10px;
+    height: 20px;
+    padding-left: 5px;
+}
+
 .players button:first-of-type {
     margin-top: 15px;
 }
