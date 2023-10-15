@@ -1,7 +1,7 @@
 function addScore(player) {
     $.ajax({
         type: 'POST',
-        url: "leaders.php",
+        url: "../leaders.php",
         data: {player: player},
     })
     clean()

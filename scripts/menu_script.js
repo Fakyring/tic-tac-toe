@@ -3,8 +3,8 @@ function leaders() {
     let leadersBoard = window.open('', 'name', features)
     leadersBoard.resizeTo(30, 500)
     leadersBoard.document.write('<html><head><title>Leadersboard</title>')
-    leadersBoard.document.write('<link rel="stylesheet" href="menu.css" type="text/css"/></head>')
-    $.post('leaderboard.txt', false, function (data) {
+    leadersBoard.document.write('<link rel="stylesheet" href="../styles/menu.css" type="text/css"/></head>')
+    $.post('../leaderboard.txt', false, function (data) {
         let result = "<body><div class='leaders'>"
         leadersBoard.document.write(JSON.parse(data, (key, value) => {
             if (typeof key !== "undefined" && typeof value === "number") {
